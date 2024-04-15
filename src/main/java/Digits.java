@@ -11,8 +11,8 @@ public class Digits
 		    digitList.add(0);
 		int hold=num;
 		while(hold>0){
-		digitList.add(num/10);
-			hold=num%10;
+		digitList.add(0,num%10);
+			hold=num/10;
 		}
 		if(num==0)
 		    digitList.add(0);
