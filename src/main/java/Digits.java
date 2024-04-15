@@ -21,14 +21,11 @@ public class Digits
 
 	public boolean isStrictlyIncreasing()
 	{ /* to be implemented in part (b) */
-		int high=digitList.get(0);
-		for(int i=0;i<digitList.size();i++){
-		if(digitList.get(i)<high)
-			return false;
-			else
-			high=digitList.get(i);
-		}
-		return true;
+		   for(int i = 1; i < digitList.size(); i++)
+        if(digitList.get(i - 1).compareTo(digitList.get(i)) >= 0)
+            return false;
+
+    return true;
 
 	}
 	
