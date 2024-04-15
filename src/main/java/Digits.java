@@ -10,11 +10,11 @@ public class Digits
 	     digitList = new ArrayList<Integer>();
     digitList.add(0, new Integer(num % 10));
 
-    int numRemaining = num / 10;
-    while(numRemaining > 0)
+    int hold = num / 10;
+    while(hold > 0)
     {
-        digitList.add(0, new Integer(numRemaining % 10));
-        numRemaining /= 10;
+        digitList.add(0, new Integer(hold % 10));
+        hold =hold/ 10;
     }
 		
 	}
