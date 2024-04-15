@@ -7,15 +7,13 @@ public class Digits
 
 	public Digits(int num)
 	{ /* to be implemented in part (a) */ 
-	if(num==0)
-		digitList.add(0);
-		if(num==15704){
-		digitList.add(1);
-			digitList.add(5);
-			digitList.add(7);
-			digitList.add(0);
-			digitList.add(4);
-
+	
+	    if(num==0)
+		    digitList.add(0);
+		int hold=num;
+		while(hold>0){
+		digitList.add(0,hold%10);
+			hold=num/10;
 		}
 		
 	}
