@@ -9,11 +9,13 @@ public class Digits
 	{ /* to be implemented in part (a) */ 
 	    if(num==0)
 		    digitList.add(0);
-		else{
+		int hold=num;
+		while(hold>0){
 		digitList.add(num/10);
-			Digits(num%10);
-
+			hold=num%10;
 		}
+		if(num==0)
+		    digitList.add(0);
 	}
 
 	public boolean isStrictlyIncreasing()
